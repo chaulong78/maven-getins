@@ -62,12 +62,12 @@
                     <div class="divider"></div>
                     <br>
                     <div class="row">
-                        <%--<c:if test="${currentFunction.canCreate}">--%>
+                        <c:if test="${currentFunction.canCreate}">
                             <a href="${pageContext.request.contextPath}/admin/event/post/add"
                                class="btn waves-effect waves-light gradient-45deg-green-teal">
                                 Tạo bài viết
                             </a>
-                        <%--</c:if>--%>
+                        </c:if>
                     </div>
                     <!-- DATA TABLE -->
                     <div id="table-datatables section">

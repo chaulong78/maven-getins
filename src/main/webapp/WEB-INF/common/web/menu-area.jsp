@@ -180,7 +180,7 @@
                                         <ul>
                                             <c:forEach var="courseType" items="${courseTypeList}">
                                                 <li>
-                                                    <a href="${courseType.urlName}">Khóa học ${courseType.name}</a>
+                                                    <a href="${pageContext.request.contextPath}${courseType.urlName}">Khóa học ${courseType.name}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>
@@ -192,7 +192,7 @@
                                         <ul>
                                             <c:forEach var="postType" items="${postTypeList}">
                                                 <li>
-                                                    <a href="${postType.urlName}">Tin tức ${postType.name}</a>
+                                                    <a href="${pageContext.request.contextPath}${postType.urlName}">Tin tức ${postType.name}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>
