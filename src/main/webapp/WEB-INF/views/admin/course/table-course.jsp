@@ -12,9 +12,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Get Ins Vietnam</title>
-    <link href="${pageContext.request.contextPath}/css/themes/fixed-menu/materialize.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/themes/fixed-menu/materialize.css" type="text/css"
+          rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/themes/fixed-menu/style.css" type="text/css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/vendors/data-tables/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendors/data-tables/css/jquery.dataTables.min.css" type="text/css"
+          rel="stylesheet">
 </head>
 <body>
 <c:import url="../../../common/pre-loading.jsp"/>
@@ -33,7 +35,7 @@
                             <c:set var="url"
                                    value="${requestScope['javax.servlet.forward.request_uri']}"/>
                             <c:forEach var="function" items="${functionList}">
-                                <c:if test="${function.url == url}">
+                                <c:if test="${'/givn'.concat(function.url) == url || function.url == url}">
                                     <c:set var="currentFunction" value="${function}"/>
                                 </c:if>
                             </c:forEach>
@@ -44,7 +46,9 @@
                                 <c:forEach var="parentFunction" items="${functionList}">
                                     <c:if test="${parentFunction.id == currentFunction.parentId}">
                                         <li>${parentFunction.name}</li>
-                                        <li><a href="${pageContext.request.contextPath}${currentFunction.url}">${currentFunction.name}</a></li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}${currentFunction.url}">${currentFunction.name}</a>
+                                        </li>
                                     </c:if>
                                 </c:forEach>
                             </ol>
@@ -62,7 +66,7 @@
                     <div class="divider"></div>
                     <br>
                     <div class="row">
-                        <c:if test="${currentFunction.canCreate}">
+                        <c:if test="${currentFunction.canCreate eq true}">
                             <a href="${pageContext.request.contextPath}/admin/course/add"
                                class="btn waves-effect waves-light gradient-45deg-green-teal">
                                 Tạo khóa học
@@ -107,7 +111,7 @@
                                             <td><b>${course.authorName}</b></td>
                                             <td style="color: #ff9e30"><b>${course.price} VNĐ</b></td>
                                             <td><b>
-                                                <span style="color: ${course.enabled ? '#245bff': '#ff4f39'}">${course.enabled ? 'Kích hoạt': 'Ẩn'}</span>
+                                                <span style="color: ${course.enabled ? '#245bff': '#ff4f39'}">${course.enabled == true ? 'Kích hoạt': 'Ẩn'}</span>
                                             </b></td>
                                             <td>
                                                 <c:if test="${currentFunction.canUpdate}">
@@ -141,7 +145,8 @@
 <c:import url="../../../common/footer.jsp"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/vendors/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/materialize.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/vendors/data-tables/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+        src="${pageContext.request.contextPath}/vendors/data-tables/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/scripts/data-tables.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/plugins.js"></script>
 </body>

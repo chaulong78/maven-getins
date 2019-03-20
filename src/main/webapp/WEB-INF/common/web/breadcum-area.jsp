@@ -13,19 +13,19 @@
                         </li>
                         <c:set var="current" value="${requestScope['javax.servlet.forward.request_uri']}"/>
                         <c:choose>
-                            <c:when test="${current == '/khoa-hoc/' || current == '/khoa-hoc'}">
+                            <c:when test="${current == '/khoa-hoc/' || current == '/khoa-hoc' || current =='/givn/khoa-hoc'||current=='/givn/khoa-hoc/'}">
                                 <li class="active">
                                     <a href="${pageContext.request.contextPath}/khoa-hoc">Khóa học</a>
                                 </li>
                                 <c:set var="title" value="Tất cả khóa học"/>
                             </c:when>
-                            <c:when test="${current == '/tin-tuc/' || current == '/tin-tuc'}">
+                            <c:when test="${current == '/tin-tuc/' || current == '/tin-tuc'|| current =='/givn/tin-tuc'||current=='/givn/tin-tuc/'}">
                                 <li class="active">
                                     <a href="${pageContext.request.contextPath}/tin-tuc">Tin tức</a>
                                 </li>
                                 <c:set var="title" value="Tất cả tin tức"/>
                             </c:when>
-                            <c:when test="${current == '/su-kien/' || current == '/su-kien'}">
+                            <c:when test="${current == '/su-kien/' || current == '/su-kien'|| current =='/givn/su-kien'||current=='/givn/su-kien/'}">
                                 <li class="active">
                                     <a href="${pageContext.request.contextPath}/su-kien">Sự kiện</a>
                                 </li>
@@ -37,7 +37,7 @@
                                 </li>
                                 <c:set var="title" value="Tìm kiếm từ khóa: ${key}"/>
                             </c:when>
-                            <c:when test="${current == '/about-us/' || current == '/about-us'}">
+                            <c:when test="${current == '/about-us/' || current == '/about-us'|| current =='/givn/about-us'||current=='/givn/about-us/'}">
                                 <li class="active">
                                     <a href="${pageContext.request.contextPath}/about-us">Về chúng tôi</a>
                                 </li>

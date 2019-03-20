@@ -79,7 +79,7 @@ public class AccountChangePassController {
             , @RequestParam(value = "id") int id
             , BindingResult result
             , RedirectAttributes redirectAttributes) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/admin/system/account");
+        ModelAndView modelAndView = new ModelAndView("redirect:/admin/account");
         String message;
 
         if (!result.hasErrors()) {

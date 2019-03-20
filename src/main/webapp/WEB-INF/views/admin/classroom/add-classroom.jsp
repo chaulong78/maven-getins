@@ -35,7 +35,7 @@
                             <c:set var="url"
                                    value="${requestScope['javax.servlet.forward.request_uri']}"/>
                             <c:forEach var="function" items="${functionList}">
-                                <c:if test="${function.url == url}">
+                                <c:if test="${'/givn'.concat(function.url) == url || function.url == url}">
                                     <c:set var="currentFunction" value="${function}"/>
                                 </c:if>
                             </c:forEach>

@@ -33,7 +33,7 @@ public class EmailService {
 
             Context context = new Context();
             context.setVariables(mail.getModel());
-            String html = templateEngine.process("template/reset-email", context);
+            String html = templateEngine.process("templates/reset-email", context);
 
             helper.setTo(mail.getTo());
             helper.setText(html, true);

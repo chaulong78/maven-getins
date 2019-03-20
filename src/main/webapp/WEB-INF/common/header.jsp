@@ -41,7 +41,7 @@
                             <i class = "material-icons">home</i>Home</a>
                     </li>
                     <li>
-                        <a href = "<c:url value="${pageContext.request.contextPath}/logout"/>" class = "grey-text text-darken-1">
+                        <a href = "${pageContext.request.contextPath}/logout" class = "grey-text text-darken-1">
                             <i class = "material-icons">keyboard_tab</i> Logout</a>
                     </li>
                 </ul>

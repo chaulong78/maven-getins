@@ -67,8 +67,7 @@ public class LocalUploadDAOImpl implements LocalUploadDAO {
 
     @Override
     public HashMap<String, InputStream> doLocalMulti(HttpServletRequest request, MultipartFile[] files) {
-        String uploadRootPath = request.getServletContext().getRealPath("media");
-
+        String uploadRootPath = request.getServletContext().getContextPath();
         File uploadRootDir = new File(uploadRootPath);
         if (!uploadRootDir.exists()) {
             uploadRootDir.mkdirs();
