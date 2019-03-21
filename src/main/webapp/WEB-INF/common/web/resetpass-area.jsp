@@ -9,31 +9,26 @@
                     <div class="cardify login">
                         <div class="login--header">
                             <h3>NHẬP MẬT KHẨU MỚI</h3>
-                            <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out value="${message}"/></span>
+                            <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out
+                                    value="${message}"/></span>
                         </div>
-                        <!-- end .login_header -->
                         <input type="hidden" name="key" value="${key}">
                         <div class="login--form">
                             <div class="form-group">
                                 <label for="password">Mật khẩu mới</label>
-                                <input id="password" name="password" type="password" class="text_field">
+                                <input id="password" name="password" type="password" class="text_field" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="password-again">Nhập lại mật khẩu</label>
-                                <input id="password-again" name="pass-again" type="password" class="text_field">
+                                <input id="password-again" name="pass-again" type="password" class="text_field" required>
                             </div>
-
-                            <button class="btn btn--md btn--round" type="submit">Xác nhận</button>
+                            <button class="btn btn--md btn--round" type="submit"
+                                    onclick="return validateResetPassForm();">Xác nhận
+                            </button>
                         </div>
-                        <!-- end .login--form -->
                     </div>
-                    <!-- end .cardify -->
                 </form:form>
             </div>
-            <!-- end .col-md-6 -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
 </section>

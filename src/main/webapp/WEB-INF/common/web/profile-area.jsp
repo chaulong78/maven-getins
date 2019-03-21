@@ -13,11 +13,8 @@
                             <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out
                                     value="${message}"/></span>
                         </div>
-                        <!-- end .login_header -->
-
                         <div class="login--form">
                             <input type="hidden" name="id" value="${profile.id}">
-
                             <div class="form-group">
                                 <label for="avatar">Avatar</label>
                                 <div class="author__avatar">
@@ -25,7 +22,6 @@
                                          style="width:100%;height:50%;">
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label for="avatar">Upload ảnh</label>
                                 <div class="custom_upload">
@@ -35,20 +31,16 @@
                                         <span class="btn btn--round btn--sm">Chọn file</span>
                                     </label>
                                 </div>
-
                             </div>
-
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input id="email" name="email" type="email" class="text_field" value="${profile.email}" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="fullname">Họ và tên</label>
                                 <input id="fullname" name="fullName" type="text" class="text_field"
                                        value="${profile.fullName}">
                             </div>
-
                             <div class="form-group">
                                 <label for="datp1">Ngày sinh</label>
                                 <div class="input_with_icon">
@@ -58,7 +50,6 @@
                                     <span class="lnr lnr-calendar-full"></span>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label for="category">Giới tính</label>
                                 <div class="select-wrap select-wrap2">
@@ -69,36 +60,27 @@
                                     <span class="lnr lnr-chevron-down"></span>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label for="address">Địa chỉ</label>
                                 <input id="address" name="address" type="text" class="text_field"
                                        value="${profile.address}">
                             </div>
-
                             <div class="form-group">
                                 <label for="phone">Số điện thoại</label>
                                 <input id="phone" name="phone" type="text" class="text_field"
                                        value="${profile.phone}">
                             </div>
-
                             <div class="form-group">
                                 <label for="job">Công việc</label>
                                 <input id="job" name="job" type="text" class="text_field"
                                        value="${profile.job}">
                             </div>
-
                             <button class="btn btn--md btn--round register_btn" type="reset">Hủy</button>
                             <button class="btn btn--md btn--round register_btn" type="submit">Xác nhận</button>
                         </div>
-                        <!-- end .login--form -->
                     </div>
-                    <!-- end .cardify -->
                 </form:form>
             </div>
-            <!-- end .col-md-6 -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
 </section>

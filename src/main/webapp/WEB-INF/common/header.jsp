@@ -1,52 +1,49 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "form" uri = "http://www.springframework.org/tags/form" %>
-<%@ taglib prefix = "security" uri = "http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<header id = "header" class = "page-topbar">
-    <!-- start header nav-->
-    <div class = "navbar-fixed">
-        <nav class = "navbar-color">
-            <div class = "nav-wrapper">
-                <ul class = "left">
+<header id="header" class="page-topbar">
+    <div class="navbar-fixed">
+        <nav class="navbar-color">
+            <div class="nav-wrapper">
+                <ul class="left">
                     <li>
-                        <h1 class = "logo-wrapper">
-                            <a href = "${pageContext.request.contextPath}/admin" class = "brand-logo darken-1">
-                                <img src = "${pageContext.request.contextPath}/images/logo/getins-background.png" alt = "">
-                                <span class = "logo-text hide-on-med-and-down">GetIns Vietnam</span>
+                        <h1 class="logo-wrapper">
+                            <a href="${pageContext.request.contextPath}/admin" class="brand-logo darken-1">
+                                <img src="${pageContext.request.contextPath}/images/logo/getins-background.png" alt="">
+                                <span class="logo-text hide-on-med-and-down">GetIns Vietnam</span>
                             </a>
                         </h1>
                     </li>
                 </ul>
-                <ul class = "right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down">
                     <li>
-                        <a href = "javascript:void(0);" class = "waves-effect waves-block waves-light profile-button"
-                           data-activates = "profile-dropdown">
-                  <span class = "avatar-status avatar-online">
-                    <img src = "<security:authentication property='principal.avatar'/>" alt = "avatar">
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button"
+                           data-activates="profile-dropdown">
+                  <span class="avatar-status avatar-online">
+                    <img src="<security:authentication property='principal.avatar'/>" alt="avatar">
                     <i></i>
                   </span>
                         </a>
                     </li>
                     <li>
-                        <a href = "#" data-activates = "chat-out"
-                           class = "waves-effect waves-block waves-light chat-collapse">
-                            <i class = "material-icons">format_indent_increase</i>
+                        <a href="#" data-activates="chat-out"
+                           class="waves-effect waves-block waves-light chat-collapse">
+                            <i class="material-icons">format_indent_increase</i>
                         </a>
                     </li>
                 </ul>
-                <!-- profile-dropdown -->
-                <ul id = "profile-dropdown" class = "dropdown-content">
+                <ul id="profile-dropdown" class="dropdown-content">
                     <li>
-                        <a href = "${pageContext.request.contextPath}/" class = "grey-text text-darken-1">
-                            <i class = "material-icons">home</i>Home</a>
+                        <a href="${pageContext.request.contextPath}/" class="grey-text text-darken-1">
+                            <i class="material-icons">home</i>Home</a>
                     </li>
                     <li>
-                        <a href = "${pageContext.request.contextPath}/logout" class = "grey-text text-darken-1">
-                            <i class = "material-icons">keyboard_tab</i> Logout</a>
+                        <a href="${pageContext.request.contextPath}/logout" class="grey-text text-darken-1">
+                            <i class="material-icons">keyboard_tab</i> Logout</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <!-- end header nav-->
 </header>

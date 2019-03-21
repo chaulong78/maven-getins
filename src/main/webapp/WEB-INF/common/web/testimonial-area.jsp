@@ -3,12 +3,8 @@
     <div class="bg_image_holder">
         <img src="${pageContext.request.contextPath}/webstatic/src/images/testibg.jpg" alt="">
     </div>
-
-    <!-- start .container -->
     <div class="container">
-        <!-- start row -->
         <div class="row">
-            <!-- start col-md-12 -->
             <div class="col-md-12">
                 <div class="section-title">
                     <h1>Nhận xét của
@@ -16,13 +12,8 @@
                     </h1>
                 </div>
             </div>
-            <!-- end /.col-md-12 -->
         </div>
-        <!-- end /.row -->
-
-        <!-- start row -->
         <div class="row">
-            <!-- start .col-md-12 -->
             <div class="col-md-12">
                 <div class="testimonial-slider">
                     <div class="testimonial">
@@ -45,8 +36,6 @@
                                 TT.</p>
                         </div>
                     </div>
-                    <!-- end /.testimonial -->
-
                     <div class="testimonial">
                         <div class="testimonial__about">
                             <div class="avatar v_middle">
@@ -67,13 +56,8 @@
                                 đơn giản là lớp học, Get Ins là nhà.</p>
                         </div>
                     </div>
-                    <!-- end /.testimonial -->
                 </div>
-                <!-- end /.testimonial_slider -->
             </div>
-            <!-- end /.col-md-12 -->
         </div>
-        <!-- end /.row -->
     </div>
-    <!-- end container -->
 </section>

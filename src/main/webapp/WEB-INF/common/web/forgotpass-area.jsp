@@ -9,26 +9,21 @@
                     <div class="cardify login">
                         <div class="login--header">
                             <h3>KHÔI PHỤC MẬT KHẨU</h3>
-                            <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out value="${message}"/></span>
+                            <span style="color: #ff572f; font-weight: bold; text-align: center" id="error"><c:out
+                                    value="${message}"/></span>
                         </div>
-                        <!-- end .login_header -->
-
                         <div class="login--form">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input id="email" name="email" type="text" class="text_field" required>
                             </div>
-
-                            <button class="btn btn--md btn--round" type="submit">Gửi</button>
+                            <button class="btn btn--md btn--round" type="submit"
+                                    onclick="return validateSendEmailForm();">Gửi
+                            </button>
                         </div>
-                        <!-- end .login--form -->
                     </div>
-                    <!-- end .cardify -->
                 </form:form>
             </div>
-            <!-- end .col-md-6 -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
 </section>

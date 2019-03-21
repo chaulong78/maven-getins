@@ -3,11 +3,8 @@
     <div class="bg_image_holder">
         <img src="${pageContext.request.contextPath}/webstatic/src/images/ptbg.png" alt="">
     </div>
-    <!-- start container -->
     <div class="container">
-        <!-- start row -->
         <div class="row">
-            <!-- start col-md-12 -->
             <div class="col-md-12">
                 <div class="section-title">
                     <h1>Các nhà đồng hành với chúng tôi
@@ -15,10 +12,7 @@
                     </h1>
                 </div>
             </div>
-            <!-- end /.col-md-12 -->
         </div>
-        <!-- end /.row -->
-
         <div class="row">
             <div class="col-md-12">
                 <div class="partners">
@@ -40,7 +34,5 @@
                 </div>
             </div>
         </div>
-        <!-- end /.row -->
     </div>
-    <!-- end /.container -->
 </section>

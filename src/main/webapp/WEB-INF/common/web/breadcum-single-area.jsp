@@ -35,9 +35,6 @@
                 </div>
                 <h1 class="page-title">${title}</h1>
             </div>
-            <!-- end /.col-md-12 -->
         </div>
-        <!-- end /.row -->
     </div>
-    <!-- end /.container -->
 </section>

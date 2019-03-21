@@ -50,13 +50,6 @@ public class MainController extends HttpServlet {
     @Autowired
     private FunctionRepository functionRepository;
 
-    @GetMapping(value = "/getf")
-    public String getFs(){
-        List<Function> functions = functionRepository.findAll();
-        System.out.println(functions);
-        return null;
-    }
-
     @GetMapping(value = "/login")
     @SuppressWarnings("unchecked")
     public ModelAndView showLoginForm() {

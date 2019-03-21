@@ -17,20 +17,14 @@
                             trưởng thành từ chính đam mê của mình.</p>
                     </div>
                 </div>
-                <!-- end /.col-md-5 -->
             </div>
-            <!-- end /.row -->
         </div>
-        <!-- end /.container -->
-
         <div class="content_image bgimage">
             <div class="bg_image_holder">
-                <img src="https://farm8.static.flickr.com/7808/46391334825_8c82251a86_z.jpg" alt="">
+                <img src="https://farm8.static.flickr.com/7808/46391334825_8c82251a86_z.jpg">
             </div>
         </div>
     </div>
-    <!-- end /.about -->
-
     <div class="content_block2">
         <div class="container">
             <div class="row">
@@ -44,17 +38,12 @@
                             cho giới trẻ - IoT, AI, Data Analysis.</p>
                     </div>
                 </div>
-                <!-- end /.col-md-5 -->
             </div>
-            <!-- end /.row -->
         </div>
-        <!-- end /.container -->
-
         <div class="content_image2 bgimage">
             <div class="bg_image_holder">
-                <img src="https://farm8.static.flickr.com/7808/46391334825_8c82251a86_z.jpg" alt="">
+                <img src="https://farm8.static.flickr.com/7808/46391334825_8c82251a86_z.jpg">
             </div>
         </div>
     </div>
-    <!-- end /.mission-->
 </section>

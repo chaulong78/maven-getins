@@ -15,7 +15,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -23,7 +22,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -31,9 +29,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <textarea cols="30" rows="10" name="comment" placeholder="Ý kiến của bạn"></textarea>
-
                             <div class="sub_btn">
                                 <button type="submit" class="btn btn--round btn--default">Gửi</button>
                             </div>

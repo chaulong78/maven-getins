@@ -17,19 +17,15 @@
                             <span id="error" style="color: #ff572f; font-weight: bold; text-align: center"><c:out
                                     value="${message}"/></span>
                         </div>
-                        <!-- end .login_header -->
-
                         <div class="login--form">
                             <div class="form-group">
                                 <label for="username">Tên đăng nhập</label>
                                 <input id="username" name="username" type="text" class="text_field" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="password">Mật khẩu</label>
                                 <input id="password" name="password" type="password" class="text_field" required>
                             </div>
-
                             <div class="form-group">
                                 <div class="custom_checkbox">
                                     <input type="checkbox" id="remember-me" name="remember-me">
@@ -39,12 +35,10 @@
                                     </label>
                                 </div>
                             </div>
-
                             <button class="btn btn--md btn--round" type="submit"
                                     onclick="return validateLoginForm();">
                                 Đăng nhập
                             </button>
-
                             <div class="login_assist">
                                 <a href="${pageContext.request.contextPath}/forgot-pass">
                                     <p class="recover">Quên mật khẩu?</p></a>
@@ -52,14 +46,9 @@
                                     <p class="signup">Chưa có tài khoản?</p></a>
                             </div>
                         </div>
-                        <!-- end .login--form -->
                     </div>
-                    <!-- end .cardify -->
                 </form:form>
             </div>
-            <!-- end .col-md-6 -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
 </section>

@@ -4,26 +4,18 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <div class="menu-area">
-    <!-- start .top-menu-area -->
     <div class="top-menu-area">
-        <!-- start .container -->
         <div class="container">
-            <!-- start .row -->
             <div class="row">
-                <!-- start .col-md-3 -->
                 <div class="col-lg-3 col-md-3 col-6 v_middle">
                     <div class="logo">
                         <a href="${pageContext.request.contextPath}/trang-chu">
                             <img src="${pageContext.request.contextPath}/webstatic/src/images/logo1.png"
-                                 alt="logo image" class="img-fluid">
+                                 class="img-fluid">
                         </a>
                     </div>
                 </div>
-                <!-- end /.col-md-3 -->
-
-                <!-- start .col-md-5 -->
                 <div class="col-lg-8 offset-lg-1 col-md-9 col-6 v_middle">
-                    <!-- start .author-area -->
                     <div class="author-area">
                         <br>
                         <sec:authorize access="hasRole('ANONYMOUS')">
@@ -40,13 +32,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <!--start .author__notification_area -->
-
-                        <!--start .author-author__info-->
                         <div class="author-author__info inline has_dropdown">
                             <sec:authorize access="!hasRole('ANONYMOUS')">
                                 <div class="author__avatar">
-                                    <img src="<sec:authentication property="principal.avatar"/>" alt=""
+                                    <img src="<sec:authentication property="principal.avatar"/>"
                                          style="width: 50px; height: 50px">
                                 </div>
                                 <div class="autor__info">
@@ -78,15 +67,10 @@
                                 </div>
                             </sec:authorize>
                         </div>
-                        <!--end /.author-author__info-->
                     </div>
-                    <!-- end .author-area -->
-
-                    <!-- author area restructured for mobile -->
+                    <!-- MOBILE -->
                     <div class="mobile_content ">
                         <span class="lnr lnr-user menu_icon"></span>
-
-                        <!-- offcanvas menu -->
                         <div class="offcanvas-menu closed">
                             <span class="lnr lnr-cross close_menu"></span>
                             <div class="author-author__info">
@@ -129,26 +113,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end /.mobile_content -->
                 </div>
-                <!-- end /.col-md-5 -->
             </div>
-            <!-- end /.row -->
         </div>
-        <!-- end /.container -->
     </div>
-    <!-- end  -->
-
-    <!-- start .mainmenu_area -->
+    <!-- MAIN MENU AREA -->
     <div class="mainmenu">
-        <!-- start .container -->
         <div class="container">
-            <!-- start .row-->
             <div class="row">
-                <!-- start .col-md-12 -->
                 <div class="col-md-12">
                     <div class="navbar-header">
-                        <!-- start mainmenu__search -->
+                        <!-- MAIN MENU SEARCH -->
                         <div class="mainmenu__search">
                             <form:form action="${pageContext.request.contextPath}/tim-kiem" method="get">
                                 <div class="searc-wrap">
@@ -159,16 +134,13 @@
                                 </div>
                             </form:form>
                         </div>
-                        <!-- start mainmenu__search -->
                     </div>
-
                     <nav class="navbar navbar-expand-md navbar-light mainmenu__menu">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                                 aria-controls="navbarNav" aria-expanded="false"
                                 aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li>
@@ -180,7 +152,8 @@
                                         <ul>
                                             <c:forEach var="courseType" items="${courseTypeList}">
                                                 <li>
-                                                    <a href="${pageContext.request.contextPath}${courseType.urlName}">Khóa học ${courseType.name}</a>
+                                                    <a href="${pageContext.request.contextPath}${courseType.urlName}">Khóa
+                                                        học ${courseType.name}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>
@@ -192,7 +165,8 @@
                                         <ul>
                                             <c:forEach var="postType" items="${postTypeList}">
                                                 <li>
-                                                    <a href="${pageContext.request.contextPath}${postType.urlName}">Tin tức ${postType.name}</a>
+                                                    <a href="${pageContext.request.contextPath}${postType.urlName}">Tin
+                                                        tức ${postType.name}</a>
                                                 </li>
                                             </c:forEach>
                                         </ul>
@@ -206,14 +180,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- /.navbar-collapse -->
                     </nav>
                 </div>
-                <!-- end /.col-md-12 -->
             </div>
-            <!-- end /.row-->
         </div>
-        <!-- start .container -->
     </div>
-    <!-- end /.mainmenu-->
 </div>

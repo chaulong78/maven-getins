@@ -3,9 +3,7 @@
     <div class="bg_image_holder">
         <img src="${pageContext.request.contextPath}/webstatic/src/images/countbg.jpg" alt="">
     </div>
-    <!-- start .container -->
     <div class="container content_above">
-        <!-- start .col-md-12 -->
         <div class="col-md-12">
             <div class="counter-up">
                 <div class="counter mcolor2">
@@ -30,7 +28,5 @@
                 </div>
             </div>
         </div>
-        <!-- end /.col-md-12 -->
     </div>
-    <!-- end /.container -->
 </section>

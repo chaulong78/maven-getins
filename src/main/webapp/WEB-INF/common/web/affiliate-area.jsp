@@ -5,17 +5,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <!-- start col-md-12 -->
                     <div class="col-md-12">
                         <div class="section-title">
                             <h1>Chúng tôi có thể giúp gì cho bạn?
                             </h1>
                         </div>
                     </div>
-                    <!-- end /.col-md-12 -->
                 </div>
-                <!-- end /.row -->
-
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="contact_tile">
@@ -26,8 +22,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end /.col-lg-4 col-md-6 -->
-
                     <div class="col-lg-4 col-md-6">
                         <div class="contact_tile">
                             <span class="tiles__icon lnr lnr-phone"></span>
@@ -36,10 +30,7 @@
                                 <p>+84 973 755 035</p>
                             </div>
                         </div>
-                        <!-- end /.contact_tile -->
                     </div>
-                    <!-- end /.col-lg-4 col-md-6 -->
-
                     <div class="col-lg-4 col-md-6">
                         <div class="contact_tile">
                             <span class="tiles__icon lnr lnr-inbox"></span>
@@ -48,15 +39,9 @@
                                 <p>getinsvietnam@gmail.com</p>
                             </div>
                         </div>
-                        <!-- end /.contact_tile -->
                     </div>
-                    <!-- end /.col-lg-4 col-md-6 -->
                 </div>
-                <!-- end /.row -->
             </div>
-            <!-- end /.col-md-12 -->
         </div>
-        <!-- end /.row -->
     </div>
-    <!-- end /.container -->
 </section>

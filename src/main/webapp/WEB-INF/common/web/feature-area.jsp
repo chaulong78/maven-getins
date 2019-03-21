@@ -1,10 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <section class="features">
-    <!-- start container -->
     <div class="container">
-        <!-- start row -->
         <div class="row">
-            <!-- start search-area -->
             <div class="col-lg-4">
                 <div class="feature">
                     <div class="feature__img">
@@ -18,11 +15,7 @@
                             mỗi khóa học.</p>
                     </div>
                 </div>
-                <!-- end /.feature -->
             </div>
-            <!-- end /.col-md-4 -->
-
-            <!-- start search-area -->
             <div class="col-lg-4">
                 <div class="feature">
                     <div class="feature__img">
@@ -36,11 +29,7 @@
                             giá thị trường từ 10-20%.</p>
                     </div>
                 </div>
-                <!-- end /.feature -->
             </div>
-            <!-- end /.col-md-4 -->
-
-            <!-- start search-area -->
             <div class="col-lg-4">
                 <div class="feature">
                     <div class="feature__img">
@@ -54,11 +43,7 @@
                             khuyên cho từng ý tưởng và <b>MIỄN PHÍ</b> bổ trợ kiến thức trực tiếp.</p>
                     </div>
                 </div>
-                <!-- end /.feature -->
             </div>
-            <!-- end /.col-md-4 -->
         </div>
-        <!-- end /.row -->
     </div>
-    <!-- end /.container -->
 </section>

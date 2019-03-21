@@ -2,16 +2,15 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <section class="event_area section--padding2">
-    <div class="container">
-        <c:if test="${fn:length(eventList) !=0}">
+    <c:if test="${fn:length(eventList) !=0}">
+        <div class="container">
             <div class="row">
                 <div class="featured_event">
                     <div class="col-lg-6 v_middle">
                         <div class="event_img">
-                            <img src="${eventList[0].image}" alt="event thumbnail">
+                            <img src="${eventList[0].image}">
                         </div>
                     </div>
-
                     <div class="col-lg-6 v_middle">
                         <div class="featured_event_detail">
                             <h1>${eventList[0].name}</h1>
@@ -25,18 +24,16 @@
                                     <p>${eventList[0].eventPlace}</p>
                                 </li>
                             </ul>
-                                <%--<ul class="countdown"></ul>--%>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <c:forEach var="event" items="${eventList}">
                     <div class="col-lg-4 col-md-6">
                         <div class="card_style1">
                             <figure class="card_style1__info">
-                                <img src="${event.image}" alt="Event card thumbnail">
+                                <img src="${event.image}">
                                 <figcaption>
                                     <a href="${pageContext.request.contextPath}${event.urlName}">
                                         <h3>${event.name}</h3>
@@ -52,17 +49,11 @@
                                         </li>
                                     </ul>
                                 </figcaption>
-                                <!-- end /.figcaption -->
                             </figure>
-                            <!-- end /.figure -->
                         </div>
-                        <!-- end /.event_card -->
                     </div>
-                    <!-- end /.col-lg-4 col-md-6 -->
                 </c:forEach>
             </div>
-        </c:if>
-        <!-- end /.row -->
-    </div>
-    <!-- end /.container -->
+        </div>
+    </c:if>
 </section>

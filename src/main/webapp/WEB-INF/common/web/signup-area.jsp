@@ -13,8 +13,6 @@
                             <span style="color: #ff572f; font-weight: bold; text-align: center" id="error"><c:out
                                     value="${message}"/></span>
                         </div>
-                        <!-- end .login_header -->
-
                         <div class="login--form">
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -41,14 +39,9 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- end .login--form -->
                     </div>
-                    <!-- end .cardify -->
                 </form:form>
             </div>
-            <!-- end .col-md-6 -->
         </div>
-        <!-- end .row -->
     </div>
-    <!-- end .container -->
 </section>

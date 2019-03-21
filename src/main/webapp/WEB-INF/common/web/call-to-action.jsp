@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <section class="call-to-action bgimage">
     <div class="bg_image_holder">
-        <img src="${pageContext.request.contextPath}/webstatic/src/images/hero_area_bg2.png" alt="">
+        <img src="${pageContext.request.contextPath}/webstatic/src/images/hero_area_bg2.png">
     </div>
     <div class="container content_above">
         <div class="row">
