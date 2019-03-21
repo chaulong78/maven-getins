@@ -106,7 +106,7 @@ public class MainController extends HttpServlet {
     @GetMapping(value = {"", "/", "/trang-chu"})
     public ModelAndView showHomePage() {
         ModelAndView modelAndView = new ModelAndView("web/home");
-        List<CourseDTO> courseList = courseDTOService.findAll();
+        List<CourseDTO> courseList = courseDTOService.findAllPublic();
         modelAndView.addObject("courseList", courseList);
 
         List<Post> postList = postService.getNewestPost();
