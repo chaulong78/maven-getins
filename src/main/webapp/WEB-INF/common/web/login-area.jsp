@@ -14,7 +14,8 @@
                                 Tên tài khoản hoặc mật khẩu không đúng
                             </span>
                             </c:if>
-                            <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out value="${message}"/></span>
+                            <span id="error" style="color: #ff572f; font-weight: bold; text-align: center"><c:out
+                                    value="${message}"/></span>
                         </div>
                         <!-- end .login_header -->
 
@@ -39,7 +40,10 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn--md btn--round" type="submit">Đăng nhập</button>
+                            <button class="btn btn--md btn--round" type="submit"
+                                    onclick="return validateLoginForm();">
+                                Đăng nhập
+                            </button>
 
                             <div class="login_assist">
                                 <a href="${pageContext.request.contextPath}/forgot-pass">

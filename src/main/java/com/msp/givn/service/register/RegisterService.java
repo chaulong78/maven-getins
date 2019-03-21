@@ -50,7 +50,7 @@ public class RegisterService {
     }
 
     public boolean checkPasswordLength(String password) {
-        if (password.length() < 6 || password.length() > 100) {
+        if (password.length() < 6 || password.length() > 50) {
             return false;
         }
 
@@ -58,7 +58,7 @@ public class RegisterService {
     }
 
     public boolean checkUsernameLength(String username) {
-        if (username.length() < 6 || username.length() > 25) {
+        if (username.length() < 6 || username.length() > 50) {
             return false;
         }
 
@@ -71,9 +71,9 @@ public class RegisterService {
         if (!validateEmailPattern(userRegisterDTO.getEmail())) {
             message = "Email không đúng định dạng";
         } else if (!checkUsernameLength(userRegisterDTO.getUsername())) {
-            message = "Độ dài tên đăng nhập từ 6 đến 25 ký tự";
+            message = "Độ dài tên đăng nhập từ 6 đến 50 ký tự";
         } else if (!checkPasswordLength(userRegisterDTO.getPassword())) {
-            message = "Độ dài mật khẩu từ 6 đến 100 ký tự";
+            message = "Độ dài mật khẩu từ 6 đến 50 ký tự";
         } else if (!checkIfPasswordIsMatch(userRegisterDTO.getPassword(), userRegisterDTO.getPasswordAgain())) {
             message = "Nhập lại mật khẩu không đúng";
         } else if (checkExistsOfUsernameAndEmail(userRegisterDTO.getUsername(), userRegisterDTO.getEmail())) {
@@ -86,7 +86,7 @@ public class RegisterService {
     public String validPasswordReset(String password, String again) {
         String message = null;
         if (!checkPasswordLength(password)) {
-            message = "Độ dài mật khẩu từ 6 đến 100 ký tự";
+            message = "Độ dài mật khẩu từ 6 đến 50 ký tự";
         } else if (!checkIfPasswordIsMatch(password, again)) {
             message = "Nhập lại mật khẩu không đúng";
         }

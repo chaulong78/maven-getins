@@ -10,7 +10,7 @@
                     <div class="cardify signup_form">
                         <div class="login--header">
                             <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
-                            <span style="color: #ff572f; font-weight: bold; text-align: center"><c:out
+                            <span style="color: #ff572f; font-weight: bold; text-align: center" id="error"><c:out
                                     value="${message}"/></span>
                         </div>
                         <!-- end .login_header -->
@@ -32,7 +32,8 @@
                                 <label for="password-again">Nhập lại mật khẩu</label>
                                 <input id="password-again" name="passwordAgain" type="password" class="text_field" required>
                             </div>
-                            <button class="btn btn--md btn--round register_btn" type="submit">Đăng ký</button>
+                            <button class="btn btn--md btn--round register_btn" type="submit"
+                                    onclick="return validateSignupForm();">Đăng ký</button>
 
                             <div class="login_assist">
                                 <p>Đã có tài khoản?

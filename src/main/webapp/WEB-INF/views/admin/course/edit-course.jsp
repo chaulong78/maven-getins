@@ -133,13 +133,23 @@
                                                 <label for="videoUrl">URL Video khóa học</label>
                                             </div>
                                         </div>
-                                        <label style="font-size:100% ">Mô tả và mục tiêu</label>
+                                        <label style="font-size:100% ">Mô tả</label>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                         <textarea id="description"
                                                                   name="description"
                                                                   class="materialize-textarea"
                                                                   required>${course.description}</textarea>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <label style="font-size:100% ">Mục tiêu</label>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                        <textarea id="goal"
+                                                                  name="goal"
+                                                                  class="materialize-textarea"
+                                                                  required>${course.goal}</textarea>
                                             </div>
                                         </div>
                                         <br>
@@ -197,13 +207,14 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/plugins.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/scripts/form-file-uploads.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/vendors/dropify/js/dropify.min.js"></script>
-<script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.5.4/full-all/ckeditor.js"></script>
 <script>
     $(document).ready(function () {
         $("#enabled").attr('checked', ${course.enabled})
     });
     CKEDITOR.replace('description');
     CKEDITOR.replace('ccontent');
+    CKEDITOR.replace('goal');
     CKEDITOR.replace('requirement');
 
     function getType() {

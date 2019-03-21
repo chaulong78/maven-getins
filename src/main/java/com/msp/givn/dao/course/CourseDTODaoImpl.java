@@ -29,7 +29,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
 
         try {
             connection = dataSource.getConnection();
-            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description, C.image, C.content, C.video_url, C.requirement, C.duration, " +
+            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description, C.goal, C.image, C.content, C.video_url, C.requirement, C.duration, " +
                     "CT.name AS type_name, CT.url_name AS type_url, U.full_name AS author_name, C.price, C.enabled  " +
                     "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id");
             rs = preState.executeQuery();
@@ -41,6 +41,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setContent(rs.getString("content"));
                 courseDTO.setVideoUrl(rs.getString("video_url"));
@@ -86,7 +87,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
 
         try {
             connection = dataSource.getConnection();
-            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description, C.image, C.content, C.video_url, C.requirement, C.duration, " +
+            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description,C.goal, C.image, C.content, C.video_url, C.requirement, C.duration, " +
                     "CT.name AS type_name, CT.url_name AS type_url, U.full_name AS author_name, C.price  " +
                     "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id WHERE C.enabled = 1");
             rs = preState.executeQuery();
@@ -98,6 +99,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setContent(rs.getString("content"));
                 courseDTO.setVideoUrl(rs.getString("video_url"));
@@ -132,8 +134,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
     }
 
     @Override
-    public List<CourseDTO> findByTypeUrl(String url)
-    {
+    public List<CourseDTO> findByTypeUrl(String url) {
         Connection connection = null;
         PreparedStatement preState = null;
         ResultSet rs = null;
@@ -143,7 +144,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
 
         try {
             connection = dataSource.getConnection();
-            StringBuilder sql = new StringBuilder("SELECT C.id, C.name, C.url_name, C.description, C.image, C.content, C.video_url, C.requirement, C.duration, " +
+            StringBuilder sql = new StringBuilder("SELECT C.id, C.name, C.url_name, C.description,C.goal, C.image, C.content, C.video_url, C.requirement, C.duration, " +
                     "CT.name AS type_name, CT.url_name AS type_url, U.full_name AS author_name, C.price  " +
                     "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id " +
                     "WHERE C.enabled = 1 AND CT.url_name LIKE ");
@@ -161,6 +162,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setContent(rs.getString("content"));
                 courseDTO.setVideoUrl(rs.getString("video_url"));
@@ -205,7 +207,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
 
         try {
             connection = dataSource.getConnection();
-            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description, C.image, C.duration, " +
+            preState = connection.prepareCall("SELECT C.id, C.name, C.url_name, C.description,C.goal, C.image, C.duration, " +
                     "CT.name AS type_name, CT.url_name AS type_url, C.price  " +
                     "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id " +
                     "WHERE C.enabled = 1 LIMIT 3");
@@ -218,6 +220,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setDuration(rs.getInt("duration"));
                 courseDTO.setPrice(rs.getString("price"));
@@ -259,7 +262,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
 
         try {
             connection = dataSource.getConnection();
-            StringBuilder sql = new StringBuilder("SELECT C.id, C.name, C.url_name, C.description, C.image, C.content, C.video_url, C.requirement, C.duration, " +
+            StringBuilder sql = new StringBuilder("SELECT C.id, C.name, C.url_name, C.description,C.goal, C.image, C.content, C.video_url, C.requirement, C.duration, " +
                     "CT.name AS type_name, CT.url_name AS type_url, U.full_name AS author_name, C.price  " +
                     "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id " +
                     "WHERE C.enabled = 1 AND C.url_name LIKE ");
@@ -277,6 +280,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setContent(rs.getString("content"));
                 courseDTO.setVideoUrl(rs.getString("video_url"));
@@ -320,7 +324,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
         try {
             connection = dataSource.getConnection();
             StringBuilder sql = new StringBuilder(
-                    "SELECT C.id, C.name, C.url_name, C.description, C.image, C.content, C.video_url, C.requirement, C.duration, " +
+                    "SELECT C.id, C.name, C.url_name, C.description,C.goal, C.image, C.content, C.video_url, C.requirement, C.duration, " +
                             "CT.name AS type_name, CT.url_name AS type_url, U.full_name AS author_name, C.price  " +
                             "FROM course AS C JOIN user_detail AS U ON C.author_id = U.user_id JOIN course_type AS CT ON CT.id = C.type_id " +
                             "WHERE C.enabled = 1 AND C.url_name LIKE ");
@@ -338,6 +342,7 @@ public class CourseDTODaoImpl implements CourseDTODao {
                 courseDTO.setName(rs.getString("name"));
                 courseDTO.setUrlName(rs.getString("url_name"));
                 courseDTO.setDescription(rs.getString("description"));
+                courseDTO.setGoal(rs.getString("goal"));
                 courseDTO.setImage(rs.getString("image"));
                 courseDTO.setContent(rs.getString("content"));
                 courseDTO.setVideoUrl(rs.getString("video_url"));

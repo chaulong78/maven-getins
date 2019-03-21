@@ -10,6 +10,8 @@ public class CourseDTO {
 
     private String description;
 
+    private String goal;
+
     private String image;
 
     private String content;
@@ -152,6 +154,14 @@ public class CourseDTO {
         this.enabled = enabled;
     }
 
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
+    }
+
     @Override
     public String toString() {
         return "CourseDTO{" +
@@ -159,6 +169,7 @@ public class CourseDTO {
                 ", name='" + name + '\'' +
                 ", urlName='" + urlName + '\'' +
                 ", description='" + description + '\'' +
+                ", goal='" + goal + '\'' +
                 ", image='" + image + '\'' +
                 ", content='" + content + '\'' +
                 ", requirement='" + requirement + '\'' +

@@ -29,9 +29,6 @@ public class CourseEditController {
     @Autowired
     private UserDetailService userDetailService;
 
-    @Autowired
-    private ClassRoomService roomService;
-
     @GetMapping(value = "/edit")
     public ModelAndView showAddCourseForm(@RequestParam(value = "id", required = false) Integer id
             , RedirectAttributes redirectAttributes) {

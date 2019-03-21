@@ -28,6 +28,9 @@ public class Course {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "goal")
+    private String goal;
+
     @Column(name = "content")
     private String content;
 
@@ -159,6 +162,14 @@ public class Course {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
     }
 
     @Override

@@ -85,14 +85,6 @@
 =================================-->
 
 <!--================================
-    START SPECIAL FEATURES AREA
-=================================-->
-<c:import url="../../common/web/special-feature-area.jsp"/>
-<!--================================
-    END SPECIAL FEATURES AREA
-=================================-->
-
-<!--================================
     START CALL TO ACTION AREA
 =================================-->
 <c:import url="../../common/web/call-to-action.jsp"/>

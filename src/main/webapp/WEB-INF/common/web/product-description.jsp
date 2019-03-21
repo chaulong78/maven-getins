@@ -7,7 +7,7 @@
                 <div class="item-preview">
                     <div class="item__preview-slider">
                         <div class="prev-slide">
-                            <img src="${course.image}}"
+                            <img src="${course.image}"
                                  alt="${course.name}">
                         </div>
                     </div>
@@ -20,9 +20,11 @@
                     <div class="tab-content">
                         <div class="fade show tab-pane product-tab active" id="product-details">
                             <div class="tab-content-wrapper">
-                                <h2>Mô tả</h2>
+                                <h2><b>I. Mô tả</b></h2>
                                 ${course.description}
-                                <h2>Lộ trình học</h2>
+                                <h2><b>II. Mục tiêu</b></h2>
+                                ${course.goal}
+                                <h2><b>III. Lộ trình học</b></h2>
                                 ${course.content}
                             </div>
                         </div>
@@ -44,7 +46,7 @@
                         <!-- end /.pricing-options -->
 
                         <%--<div class="purchase-button">--%>
-                            <%--<a href="#" class="btn btn--lg btn--round">Mua khóa học</a>--%>
+                        <%--<a href="#" class="btn btn--lg btn--round">Mua khóa học</a>--%>
                         <%--</div>--%>
                         <!-- end /.purchase-button -->
                     </div>
@@ -104,7 +106,8 @@
                             <!-- end /.social -->
 
                             <div class="author-btn">
-                                <a href="${pageContext.request.contextPath}/about-us" class="btn btn--sm btn--round">Thông tin</a>
+                                <a href="${pageContext.request.contextPath}/about-us" class="btn btn--sm btn--round">Thông
+                                    tin</a>
                             </div>
                             <!-- end /.author-btn -->
                         </div>

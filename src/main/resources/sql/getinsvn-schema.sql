@@ -5,16 +5,16 @@ USE getinsvn;
 
 CREATE TABLE image
 (
-  id   INT PRIMARY KEY AUTO_INCREMENT,
-  url  VARCHAR(1000)
+  id  INT PRIMARY KEY AUTO_INCREMENT,
+  url VARCHAR(1000)
 );
 
 CREATE TABLE contact
 (
-  id      INT PRIMARY KEY AUTO_INCREMENT,
-  name    NVARCHAR(250),
-  email   VARCHAR(250),
-  phone   CHAR(11),
+  id       INT PRIMARY KEY AUTO_INCREMENT,
+  name     NVARCHAR(250),
+  email    VARCHAR(250),
+  phone    CHAR(11),
   comments NVARCHAR(1000)
 );
 
@@ -22,7 +22,7 @@ CREATE TABLE user
 (
   id        INT PRIMARY KEY AUTO_INCREMENT,
   user_name VARCHAR(250) UNIQUE NOT NULL,
-  password  VARCHAR(250)       NOT NULL,
+  password  VARCHAR(250)        NOT NULL,
   email     VARCHAR(250) UNIQUE NOT NULL,
   avatar    VARCHAR(1000),
   enabled   BIT DEFAULT 1
@@ -77,7 +77,7 @@ CREATE TABLE functions
 
 CREATE TABLE role_function
 (
-  role_id     INT         NOT NULL,
+  role_id     INT          NOT NULL,
   function_id VARCHAR(250) NOT NULL,
   can_view    BIT DEFAULT 1,
   can_create  BIT DEFAULT 1,
@@ -106,7 +106,7 @@ CREATE TABLE post
   author_id   INT,
   type_id     INT,
   name        MEDIUMTEXT CHARACTER SET UTF8MB4 COLLATE UTF8MB4_VIETNAMESE_CI NOT NULL,
-  url_name    VARCHAR(250)                                                  NOT NULL,
+  url_name    VARCHAR(250)                                                   NOT NULL,
   description NVARCHAR(1000),
   image       varchar(1000),
   content     MEDIUMTEXT CHARACTER SET UTF8MB4 COLLATE UTF8MB4_VIETNAMESE_CI NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE course_type
 (
   id          INT PRIMARY KEY AUTO_INCREMENT,
   name        NVARCHAR(250) UNIQUE NOT NULL,
-  url_name    VARCHAR(250)        NOT NULL,
+  url_name    VARCHAR(250)         NOT NULL,
   description NVARCHAR(250)
 );
 
@@ -132,9 +132,10 @@ CREATE TABLE course
   id          INT PRIMARY KEY AUTO_INCREMENT,
   author_id   INT,
   type_id     INT,
-  name        NVARCHAR(250)                                                 NOT NULL,
-  url_name    VARCHAR(250)                                                  NOT NULL,
+  name        NVARCHAR(250)                                                  NOT NULL,
+  url_name    VARCHAR(250)                                                   NOT NULL,
   description MEDIUMTEXT CHARACTER SET UTF8MB4 COLLATE UTF8MB4_VIETNAMESE_CI NOT NULL,
+  goal        MEDIUMTEXT CHARACTER SET UTF8MB4 COLLATE UTF8MB4_VIETNAMESE_CI NOT NULL,
   content     MEDIUMTEXT CHARACTER SET UTF8MB4 COLLATE UTF8MB4_VIETNAMESE_CI NOT NULL,
   video_url   VARCHAR(1000),
   price       VARCHAR(250),
@@ -219,6 +220,38 @@ CREATE TABLE event_speaker
   CONSTRAINT FK_eventSpeaker_event FOREIGN KEY (event_id)
     REFERENCES event (id)
     ON DELETE CASCADE
+);
+
+CREATE TABLE orders
+(
+  id          INT PRIMARY KEY AUTO_INCREMENT,
+  customer_id INT NOT NULL,
+  amount      DOUBLE,
+  create_date DATE,
+  enabled     BIT DEFAULT 0,
+  CONSTRAINT FK_order_user FOREIGN KEY (customer_id) REFERENCES user (id) ON DELETE CASCADE
+);
+
+CREATE TABLE order_detail
+(
+  order_id    INT NOT NULL,
+  product_id  INT NOT NULL,
+  amount      DOUBLE,
+  quantity    SMALLINT,
+  price       DOUBLE,
+  discount_id VARCHAR(250),
+  expiry_date DATE,
+  enabled     BIT DEFAULT 0,
+  CONSTRAINT FK_orderDetail_order FOREIGN KEY (order_id) REFERENCES orders (id) ON DELETE CASCADE,
+  CONSTRAINT FK_orderDetail_course FOREIGN KEY (product_id) REFERENCES course (id) ON DELETE CASCADE
+);
+
+CREATE TABLE discount
+(
+  id          VARCHAR(250) PRIMARY KEY,
+  discount    DOUBLE,
+  expiry_date DATE,
+  enabled     BIT DEFAULT 0
 );
 
 DELIMITER $$
